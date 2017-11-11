@@ -1,4 +1,4 @@
-﻿alert("Welcome to my page that will calculate area covered by a triangle of your choice just type in values and clap your hands while this 'state of the art' computer will perform this super complex operation...by a JS Function!!wow!!");
+﻿/*alert("Welcome to my page that will calculate area covered by a triangle of your choice just type in values and clap your hands while this 'state of the art' computer will perform this super complex operation...by a JS Function!!wow!!");
 
 var	a = prompt ('type in base length'),
 	h = prompt ('type in height'),
@@ -20,3 +20,29 @@ alert('' + pole1 + ' jest to pole trojkątka o podstawie 10 i wysokości 5 ');
 alert('' + pole2 + ' jest to pole trojkątka o podstawie 8 i wysokości 3 ');
 alert('' + pole3 + ' jest to pole trojkątka o podstawie 7 i wysokości 2 ');
 alert('A to koniec ... chyba, no bo funcja w środku - alerty na zewnątrz a błąd nie wyświetla się ...')
+*/
+var podstawa = prompt('type in base length'),
+	wysokosc = prompt('type in height'),
+	twojePole = getTriangleArea(podstawa, wysokosc);
+	
+function getTriangleArea(a, h) {
+	if ((a <= 0) || (h <= 0)) {
+		alert('no nie tak');
+	} else if ((a > 0) && (h > 0)) {
+		return a*h/2;
+	}
+}
+alert(twojePole);
+
+var poleI = getTriangleArea(10, 5);
+if (poleI) {
+	alert(poleI);
+}
+var	poleIi = getTriangleArea(8, 3);
+if (poleIi) {
+	alert(poleIi);
+}
+var	poleIii = getTriangleArea(-3, 5);
+if (poleIii) {
+	alert(poleIii);
+}
